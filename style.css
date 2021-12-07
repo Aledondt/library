@@ -1,0 +1,68 @@
+/*add book form features*/
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    border: 2px solid rgb(58, 1, 85);
+    border-radius: 10px;
+    background-color: #b083b9;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+
+/*main container, and book grid*/
+
+.main {
+    max-width: 1400px;
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 40px;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border: 2px solid rgb(58, 1, 85);
+    border-radius: 5px;
+    background-color: #b083b9;
+    text-align: center;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.add-book-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 1;
+}
+
+.overlay.active {
+    display: block;
+}
